@@ -1,0 +1,87 @@
+# model = Sequential()
+#
+# model.add(Conv2D(neuron, (3, 3), padding='same', input_shape=inputShape, activation=act))
+# model.add(Conv2D(neuron, (3, 3), padding='same', input_shape=inputShape, activation=act))
+#
+# model.add(MaxPooling2D(pool_size=(2, 2)))
+# model.add(Conv2D(2 * neuron, (3, 3), padding='same', activation=act))
+# model.add(Conv2D(2 * neuron, (3, 3), padding='same', activation=act))
+#
+# model.add(MaxPooling2D(pool_size=(2, 2)))
+# model.add(Conv2D(4 * neuron, (3, 3), padding='same', activation=act))
+# model.add(Conv2D(4 * neuron, (3, 3), padding='same', activation=act))
+# model.add(Conv2D(4 * neuron, (3, 3), padding='same', activation=act))
+#
+# model.add(MaxPooling2D(pool_size=(2, 2)))
+# model.add(Conv2D(8 * neuron, (3, 3), padding='same', activation=act))
+# model.add(Conv2D(8 * neuron, (3, 3), padding='same', activation=act))
+# model.add(Conv2D(8 * neuron, (3, 3), padding='same', activation=act))
+#
+# model.add(MaxPooling2D(pool_size=(2, 2)))
+# model.add(Conv2D(8 * neuron, (3, 3), padding='same', activation=act))
+# model.add(Conv2D(8 * neuron, (3, 3), padding='same', activation=act))
+# model.add(Conv2D(8 * neuron, (3, 3), padding='same', activation=act))
+#
+# model.add(MaxPooling2D(pool_size=(2, 2)))
+# model.add(Flatten())
+#
+# model.add(Dense(neuron * 8, activation = act))
+# model.add(Dropout(0.25))
+# model.add(Dense(neuron * 4, activation = act))
+# model.add(Dropout(0.5))
+# model.add(Dense(neuron * 2, activation = act))
+# model.add(Dropout(0.25))
+# model.add(Dense(3, activation = 'softmax'))
+#
+# model.compile(loss='mean_squared_error',
+#               optimizer='SGD',
+#               metrics=['accuracy'])
+#
+# model.fit(np.array(xTrain), np.array(yTrain),
+#           batch_size=8, epochs=10)
+#
+# results = model.evaluate(np.array(xTest), np.array(yTest), batch_size=3)
+
+# print(f"Acc:{results[1]}, Loss:{results[0]}")
+
+# firstNet = NeuralNetwork(Input(inputShape))
+# firstNet.addDense(Conv2D(neuron, (3, 3), padding='same', input_shape=inputShape, activation=act))
+# firstNet.addDense(Conv2D(neuron, (3, 3), padding='same', input_shape=inputShape, activation=act))
+# firstNet.addDense(MaxPooling2D(pool_size=(2, 2)))
+# firstNet.addDense(Conv2D(2 * neuron, (3, 3), padding='same', activation=act))
+# firstNet.addDense(Conv2D(2 * neuron, (3, 3), padding='same', activation=act))
+# firstNet.addDense(Conv2D(2 * neuron, (3, 3), padding='same', activation=act))
+# firstNet.addDense(MaxPooling2D(pool_size=(2, 2)))
+# firstNet.addDense(Conv2D(4 * neuron, (3, 3), padding='same', activation=act))
+# firstNet.addDense(Conv2D(4 * neuron, (3, 3), padding='same', activation=act))
+# firstNet.addDense(Conv2D(4 * neuron, (3, 3), padding='same', activation=act))
+# firstNet.addDense(MaxPooling2D(pool_size=(2, 2)))
+# firstNet.addDense(Flatten())
+# firstNet.addDense(Dense(neuron * 8, activation = act))
+# firstNet.addDense(Dropout(0.2))
+# firstNet.addDense(Dense(neuron * 4, activation = act))
+# firstNet.addDense(Dropout(0.4))
+# firstNet.addDense(Dense(neuron * 2, activation = act))
+# firstNet.addDense(Dropout(0.2))
+# firstNet.addDense(Dense(numClasses, activation = 'softmax'))
+#
+# secondNet = NeuralNetwork(Input(inputShape))
+# secondNet.addDense(Conv2D(neuron, (3, 3), padding='same', input_shape=inputShape, activation=act))
+# secondNet.addDense(Conv2D(neuron, (3, 3), padding='same', input_shape=inputShape, activation=act))
+# secondNet.addDense(MaxPooling2D(pool_size=(2, 2)))
+# secondNet.addDense(Conv2D(2 * neuron, (3, 3), padding='same', activation=act))
+# secondNet.addDense(Conv2D(2 * neuron, (3, 3), padding='same', activation=act))
+# secondNet.addDense(Conv2D(2 * neuron, (3, 3), padding='same', activation=act))
+# secondNet.addDense(MaxPooling2D(pool_size=(2, 2)))
+# secondNet.addDense(Conv2D(4 * neuron, (3, 3), padding='same', activation=act))
+# secondNet.addDense(Conv2D(4 * neuron, (3, 3), padding='same', activation=act))
+# secondNet.addDense(Conv2D(4 * neuron, (3, 3), padding='same', activation=act))
+# secondNet.addDense(MaxPooling2D(pool_size=(2, 2)))
+# secondNet.addDense(Flatten())
+# secondNet.addDense(Dense(neuron * 4, activation = act))
+# secondNet.addDense(Dropout(0.2))
+# secondNet.addDense(Dense(neuron * 2, activation = act))
+# secondNet.addDense(Dropout(0.4))
+# secondNet.addDense(Dense(neuron, activation = act))
+# secondNet.addDense(Dropout(0.2))
+# secondNet.addDense(Dense(numClasses, activation = 'softmax'))
